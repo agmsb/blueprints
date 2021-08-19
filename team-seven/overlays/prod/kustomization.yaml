@@ -7,6 +7,6 @@ bases:
 patchesStrategicMerge:
 - service.yaml
 configMapGenerator:
-- name: fancy-features
+- name: demo-feature
   literals:    
-  - ENABLE_FEATURE="the stable feature that belongs in prod"
+  - FEATURE="stable and reliable feature"
