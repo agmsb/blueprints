@@ -18,3 +18,9 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
+        env:
+        - name: FEATURE
+          valueFrom:
+            configMapKeyRef:
+              name: demo-feature
+              key: FEATURE
