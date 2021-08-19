@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:
+  env: prod
+bases:
+  - https://github.com/agmsb/blueprints/team-seven/resources
+patchesStrategicMerge:
+- service.yaml
+configMapGenerator:
+- name: fancy-features
+  literals:    
+  - ENABLE_FEATURE="the stable feature that belongs in prod"
